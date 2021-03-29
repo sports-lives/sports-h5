@@ -1,0 +1,13 @@
+apps:
+    - script: ./node_modules/nuxt/bin/nuxt.js
+      args: 'start'
+      name: 'h5'
+      instances: 2
+      exec_mode: cluster
+      watch_delay: 500
+      watch: ['dist']
+      ignore_watch: ['node_modules', 'public', 'src', 'test']
+      watch_options:
+          followSymlinks: false
+      env:
+          NODE_ENV: production

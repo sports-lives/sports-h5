@@ -1,0 +1,31 @@
+{
+  "name": "sports-h5-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "nuxt-ts generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxt/typescript-runtime": "^2.1.0",
+    "@nuxtjs/axios": "^5.13.1",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.3",
+    "nuxt-property-decorator": "^2.9.1",
+    "regenerator-runtime": "^0.13.7",
+    "vant": "^2.12.10",
+    "vue-tsx-support": "^2.3.3"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.3",
+    "@nuxt/typescript-build": "^2.1.0",
+    "babel-plugin-import": "^1.13.3",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "postcss-px2rem": "^0.3.0",
+    "prettier": "^2.2.1"
+  }
+}
