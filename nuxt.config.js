@@ -73,6 +73,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: true,
     postcss:{
       plugins:{
         "postcss-px2rem": {
