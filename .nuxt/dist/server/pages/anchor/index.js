@@ -1,4 +1,4 @@
-exports.ids = [2];
+exports.ids = [1];
 exports.modules = {
 
 /***/ 24:
@@ -111,89 +111,23 @@ module.exports = {
 
 /***/ }),
 
-/***/ 26:
-/***/ (function(module, exports) {
-
-// Exports
-module.exports = {
-	"header": "BOiP_7xh1T4UCoBihpOjG",
-	"header-item": "j5IAh1eu6m-OLPt5hg-cV",
-	"home": "_2J1c21hM2FcuAUre1PZv3A",
-	"banner": "rgomnktxfewsny-zuLg53",
-	"van-swipe": "_7RdGvWZJ7-UjXDT0cmL4P",
-	"van-swipe-item": "_2gQHPxwNhlsXajTtxsFAM6",
-	"match": "HkE_ZLZzpLFTsj9VmxLB8",
-	"match-item": "_3P5QWw5hDQUDIbfZKL7bJ7"
-};
-
-
-/***/ }),
-
-/***/ 27:
-/***/ (function(module, exports) {
-
-// Exports
-module.exports = {
-	"down": "_1hGriMo_xzg0om5vB6XGRh"
-};
-
-
-/***/ }),
-
-/***/ 29:
+/***/ 28:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "tslib"
-var external_tslib_ = __webpack_require__(21);
-
-// EXTERNAL MODULE: external "nuxt-property-decorator"
-var external_nuxt_property_decorator_ = __webpack_require__(22);
-
-// EXTERNAL MODULE: external "vue-tsx-support"
-var external_vue_tsx_support_ = __webpack_require__(23);
-
-// EXTERNAL MODULE: ./pages/home.scss
-var home = __webpack_require__(26);
-
-// EXTERNAL MODULE: ./components/download/down.scss
-var down = __webpack_require__(27);
-
-// CONCATENATED MODULE: ./components/download/index.tsx
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(21);
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(tslib__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var nuxt_property_decorator__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var nuxt_property_decorator__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nuxt_property_decorator__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_tsx_support__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var vue_tsx_support__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_tsx_support__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_anchorItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(24);
 
 
 
 
-let download_Download = class Download extends external_vue_tsx_support_["Component"] {
-  render() {
-    const h = arguments[0];
-    return h("div", {
-      "class": 'down'
-    }, [h("img", {
-      "attrs": {
-        "src": "https://m.dqiu.com/img/banner-lingqu@2x.279fac18.png",
-        "alt": ""
-      }
-    })]);
-  }
-
-};
-download_Download = Object(external_tslib_["__decorate"])([external_nuxt_property_decorator_["Component"]], download_Download);
-
-// EXTERNAL MODULE: ./components/anchorItem/index.tsx
-var anchorItem = __webpack_require__(24);
-
-// CONCATENATED MODULE: ./pages/index.tsx
-
-
-
-
-
-
-let pages_InfoPage = class InfoPage extends external_vue_tsx_support_["Component"] {
+let InfoPage = class InfoPage extends vue_tsx_support__WEBPACK_IMPORTED_MODULE_2__["Component"] {
   constructor() {
     super(...arguments);
     this.hot = [];
@@ -205,50 +139,28 @@ let pages_InfoPage = class InfoPage extends external_vue_tsx_support_["Component
     $axios
   }) {
     const data = await $axios.$get('https://api.firefoxbet.com/api/anchor/home');
-    const nav = await $axios.$get('https://api.firefoxbet.com/api/channel/list');
-    return { ...data.data,
-      nav: nav.data
+    return { ...data.data
     };
   }
 
   render() {
     const h = arguments[0];
-    const header = h("div", {
-      "class": 'header'
-    }, [h("li", {
-      "class": 'header-item'
-    }, ["\u70ED\u95E8"]), this.nav.map((item, i) => h("li", {
-      "class": 'header-item'
-    }, [item.channelName]))]);
-    const items = this.hot.map((item, i) => h(anchorItem["a" /* AnchorItem */], {
+    const items = this.hot.map((item, i) => h(_components_anchorItem__WEBPACK_IMPORTED_MODULE_3__[/* AnchorItem */ "a"], {
       "attrs": {
         "item": item
       },
       "key": i
     }));
-    const banner = this.recommend.map((item, index) => h("van-swipe-item", [h("img", {
-      "attrs": {
-        "src": item.cover,
-        "alt": ""
-      }
-    })]));
     return h("div", {
       "class": 'home'
-    }, [h(download_Download), header, h("div", {
-      "class": 'banner'
-    }, [h("van-swipe", {
-      "attrs": {
-        "autoplay": "3000",
-        "indicator-color": "white"
-      }
-    }, [banner])]), h("div", {
+    }, [h("div", {
       "class": 'match'
     }, [items])]);
   }
 
 };
-pages_InfoPage = Object(external_tslib_["__decorate"])([external_nuxt_property_decorator_["Component"]], pages_InfoPage);
-/* harmony default export */ var pages = __webpack_exports__["default"] = (pages_InfoPage);
+InfoPage = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([nuxt_property_decorator__WEBPACK_IMPORTED_MODULE_1__["Component"]], InfoPage);
+/* harmony default export */ __webpack_exports__["default"] = (InfoPage);
 
 /***/ })
 

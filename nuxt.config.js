@@ -40,17 +40,16 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/styles/index.css',
-    'vant/lib/index.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
    // '@/plugins/composition-api',
-    '@/plugins/vant-ui'
+    {
+      src:'@/plugins/vant-ui',
+      ssr:true
+    }
   ],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
- // components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -63,8 +62,6 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -74,7 +71,8 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  //  extractCSS: true,
+    extractCSS:true,
+   // transpile: [/^vant/],
     postcss:{
       plugins:{
         "postcss-px2rem": {
@@ -83,32 +81,35 @@ export default {
       }
     },
     extend (config, ctx) {
-      const scssLoader = config.module.rules.find(rule => {
-        return rule.test.toString() === '/\\.scss$/i';
-      });
-      scssLoader.oneOf.map(rule => {
-        rule.use.forEach(loader => {
-          if (loader.loader.includes('\\css-loader\\dist')){
-            loader.options.modules={
-              mode: 'local',
-              localIdentName: '[name]_[local]',
-              exportLocalsConvention: 'camelCaseOnly',
-              auto: /\.module\.\w+$/i,
-            }
-          }
-        })
-      })
-
-    }
+    //   const scssLoader = config.module.rules.find(rule => {
+    //     return rule.test.toString() === '/\\.scss$/i';
+    //   });
+    //   scssLoader.oneOf.map(rule => {
+    //     rule.use.forEach(loader => {
+    //       if (loader.loader.includes('\\css-loader\\dist')){
+    //         loader.options.modules={
+    //           mode: 'local',
+    //           localIdentName: '[name]_[local]',
+    //           exportLocalsConvention: 'camelCaseOnly',
+    //           auto: /\.module\.\w+$/i,
+    //         }
+    //       }
+    //     })
+    //   })
+    //
+     }
   },
   server: {
     host: '0.0.0.0'
   },
   render: {
     bundleRenderer: {
-      shouldPreload: (file, type) => {
-        return ['style', 'font'].includes(type)
-      }
+      // shouldPreload: (file, type) => {
+      //   return false
+      // },
+      // shouldPrefetch:(file, type) => {
+      //   return false
+      // }
     }
   }
 }

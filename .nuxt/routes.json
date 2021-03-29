@@ -1,5 +1,12 @@
 [
   {
+    "name": "anchor",
+    "path": "/anchor",
+    "component": "H:\\\\sports-h5-nuxt\\\\pages\\\\anchor\\\\index.tsx",
+    "chunkName": "pages/anchor/index",
+    "_name": "_09b98b81"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "H:\\\\sports-h5-nuxt\\\\pages\\\\index.tsx",

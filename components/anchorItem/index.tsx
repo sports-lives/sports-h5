@@ -1,6 +1,6 @@
 import {Component, Prop} from "nuxt-property-decorator";
 import * as tsx from "vue-tsx-support";
-import anchor from './anchor.module.scss';
+import  './anchor.scss';
 @Component
 export  class AnchorItem extends tsx.Component<any>{
   @Prop(Object)
@@ -11,7 +11,7 @@ export  class AnchorItem extends tsx.Component<any>{
   })
   public isHome: any;
   render(props) {
-    const classes = [this.isHome ? anchor.isHome : anchor.isOther];
+    const classes = [this.isHome ? 'isHome' :'isOther'];
     const { roomId, cover, user, isLive, title,carousel } = this.item;
     let matchTitle='';
     if (carousel){
@@ -19,23 +19,23 @@ export  class AnchorItem extends tsx.Component<any>{
 
     }
     return (
-      <router-link target="_blank" to={ '/' + roomId} data-title={matchTitle} class={[anchor.anchorItem, anchor.homeAnchor, ...classes]}>
+      <router-link target="_blank" to={ '/' + roomId} data-title={matchTitle} class={['anchor-item', 'home-anchor', ...classes]}>
 
-        <div class={anchor.anchorCover}>
-          <img src={cover} class={matchTitle} />
+        <div class='anchor-cover'>
+          <img src={cover} alt={matchTitle} />
         </div>
-        <div class={anchor.anchorInfo}>
-          <div class={anchor.anchorAvatar}>
+        <div class='anchor-info'>
+          <div class='anchor-avatar'>
             <img src={user.avatar} alt={matchTitle} />
           </div>
-          <div class={anchor.anchorInfoDesc}>
-            <div class={[anchor.anchorInfoTitle, 'ellipsis']}>
+          <div class='anchor-info-desc'>
+            <div class={['anchor-info-title', 'ellipsis']}>
               {title ||matchTitle|| '凯尔特人vs快船！双锋的较量！一号位的自救！'}
             </div>
-            <div class={anchor.anchorInfoWarp}>
-              <div class={anchor.anchorInfoName}>{user.nickname || '豪球用户' + user.id}</div>
-              <div class={anchor.anchorInfoHot}>
-                <i class={anchor.hotIcon}></i>
+            <div class='anchor-info-warp'>
+              <div class='anchor-info-name'>{user.nickname || '豪球用户' + user.id}</div>
+              <div class='anchor-info-hot'>
+                <i class='hotIcon'></i>
                 1.6万
               </div>
             </div>

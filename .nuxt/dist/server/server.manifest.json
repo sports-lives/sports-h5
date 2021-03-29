@@ -1,10 +1,12 @@
 {
   "entry": "server.js",
   "files": {
+    "pages/anchor/index.js": "pages/anchor/index.js",
     "pages/index.js": "pages/index.js",
     "server.js": "server.js"
   },
   "maps": {
+    "pages/anchor/index.js": "pages/anchor/index.js.map",
     "pages/index.js": "pages/index.js.map",
     "server.js": "server.js.map"
   }

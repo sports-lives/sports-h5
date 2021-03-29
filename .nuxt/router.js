@@ -4,6 +4,7 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
+const _09b98b81 = () => interopDefault(import('..\\pages\\anchor\\index.tsx' /* webpackChunkName: "pages/anchor/index" */))
 const _1ef23454 = () => interopDefault(import('..\\pages\\index.tsx' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -18,6 +19,10 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/anchor",
+    component: _09b98b81,
+    name: "anchor"
+  }, {
     path: "/",
     component: _1ef23454,
     name: "index"

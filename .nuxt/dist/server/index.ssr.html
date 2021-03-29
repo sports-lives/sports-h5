@@ -1,9 +1,15 @@
 <!doctype html>
 <html {{ html_attrs }}>
-  <head {{ head_attrs }}>
-    {{ HEAD }}
-  </head>
-  <body {{ body_attrs }}>
-    {{ APP }}
-  </body>
+<head {{ head_attrs }}>
+  {{ HEAD }}
+</head>
+<body {{ body_attrs }}>
+<!--[if IE 9]>
+<div class="browser-tips">
+<span class="error-tips"></span>为了您的账号安全，获得更好的使用体验，建议您升级为最新的 IE
+浏览器，或使用 Chrome、Firefox 浏览器
+</div>
+<![endif]-->
+{{ APP }}
+</body>
 </html>

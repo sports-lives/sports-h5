@@ -2,7 +2,7 @@
 
 import {Component} from "nuxt-property-decorator";
 import * as tsx from 'vue-tsx-support'
-import home from './index/home.module.scss'
+import  './home.scss'
 import {Download} from "~/components/download";
 import {AnchorItem} from "~/components/anchorItem";
 @Component
@@ -17,12 +17,12 @@ export default class InfoPage extends tsx.Component<any>{
   }
   render (){
     const header=(
-      <div class={home.header}>
-        <li class={home.headerItem}>
+      <div class='header'>
+        <li class='header-item'>
          热门
         </li>
         {
-          this.nav.map((item:any,i)=>( <li class={home.headerItem}>
+          this.nav.map((item:any,i)=>( <li class='header-item'>
             {item.channelName}
           </li>))
         }
@@ -36,16 +36,16 @@ export default class InfoPage extends tsx.Component<any>{
        </van-swipe-item>
      ))
 
-    return (<div class={home.home}>
+    return (<div class='home'>
       <Download></Download>
       {header}
-       <div class={home.banner}>
+       <div class='banner'>
          <van-swipe  autoplay="3000" indicator-color="white">
            {banner}
 
          </van-swipe>
        </div>
-      <div class={home.match}>
+      <div class='match'>
         {items}
       </div>
     </div>)
