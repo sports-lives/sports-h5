@@ -103,5 +103,12 @@ export default {
   },
   server: {
     host: '0.0.0.0'
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['style', 'font'].includes(type)
+      }
+    }
   }
 }
