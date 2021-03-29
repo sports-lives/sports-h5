@@ -5,6 +5,8 @@ import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch,
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
+import '..\\styles\\index.css'
+
 import '..\\node_modules\\vant\\lib\\index.css'
 
 import '..\\node_modules\\prismjs\\themes\\prism.css'

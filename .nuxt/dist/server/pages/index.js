@@ -1,7 +1,21 @@
 exports.ids = [1];
 exports.modules = {
 
-/***/ 28:
+/***/ 33:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(34);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(3).default("383c0b16", content, true)
+
+/***/ }),
+
+/***/ 34:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -23,7 +37,21 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 29:
+/***/ 35:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(36);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(3).default("49a8073b", content, true)
+
+/***/ }),
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -40,7 +68,21 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 30:
+/***/ 37:
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(38);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(3).default("4679cc7b", content, true)
+
+/***/ }),
+
+/***/ 38:
 /***/ (function(module, exports, __webpack_require__) {
 
 // Imports
@@ -68,7 +110,7 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ 31:
+/***/ 39:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -76,20 +118,20 @@ module.exports = ___CSS_LOADER_EXPORT___;
 __webpack_require__.r(__webpack_exports__);
 
 // EXTERNAL MODULE: external "tslib"
-var external_tslib_ = __webpack_require__(25);
+var external_tslib_ = __webpack_require__(30);
 
 // EXTERNAL MODULE: external "nuxt-property-decorator"
-var external_nuxt_property_decorator_ = __webpack_require__(26);
+var external_nuxt_property_decorator_ = __webpack_require__(31);
 
 // EXTERNAL MODULE: external "vue-tsx-support"
-var external_vue_tsx_support_ = __webpack_require__(27);
+var external_vue_tsx_support_ = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./pages/index/home.module.scss
-var home_module = __webpack_require__(28);
+var home_module = __webpack_require__(33);
 var home_module_default = /*#__PURE__*/__webpack_require__.n(home_module);
 
 // EXTERNAL MODULE: ./components/download/down.module.scss
-var down_module = __webpack_require__(29);
+var down_module = __webpack_require__(35);
 var down_module_default = /*#__PURE__*/__webpack_require__.n(down_module);
 
 // CONCATENATED MODULE: ./components/download/index.tsx
@@ -114,7 +156,7 @@ let download_Download = class Download extends external_vue_tsx_support_["Compon
 download_Download = Object(external_tslib_["__decorate"])([external_nuxt_property_decorator_["Component"]], download_Download);
 
 // EXTERNAL MODULE: ./components/anchorItem/anchor.module.scss
-var anchor_module = __webpack_require__(30);
+var anchor_module = __webpack_require__(37);
 var anchor_module_default = /*#__PURE__*/__webpack_require__.n(anchor_module);
 
 // CONCATENATED MODULE: ./components/anchorItem/index.tsx

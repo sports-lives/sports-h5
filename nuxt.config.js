@@ -39,7 +39,8 @@ export default {
   },
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-  'vant/lib/index.css'
+    '@/styles/index.css',
+    'vant/lib/index.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -73,7 +74,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extractCSS: true,
+  //  extractCSS: true,
     postcss:{
       plugins:{
         "postcss-px2rem": {
@@ -87,7 +88,6 @@ export default {
       });
       scssLoader.oneOf.map(rule => {
         rule.use.forEach(loader => {
-
           if (loader.loader.includes('\\css-loader\\dist')){
             loader.options.modules={
               mode: 'local',
